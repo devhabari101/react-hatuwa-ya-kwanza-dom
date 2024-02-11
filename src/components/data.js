@@ -1,0 +1,42 @@
+export const planets = [
+  {
+    id: 0,
+    jina: "Dunia",
+    alama: "🜨 and ♁",
+    chimbuko: "hakuna taarifa",
+    mgunduzi: "",
+    imageId: "vhSz50AaFAs",
+  },
+  {
+    id: 1,
+    jina: "Saturn",
+    alama: "♄",
+    chimbuko: "Saturn",
+    mgunduzi: "",
+    imageId: "2W-QWAC0mzI",
+  },
+  {
+    id: 2,
+    jina: "Venus",
+    alama: "♀",
+    chimbuko: "Miungu ya mapenzi ya Roman",
+    mgunduzi: "",
+    imageId: "88BMUbQHGlQ",
+  },
+  {
+    id: 3,
+    jina: "uranus",
+    alama: "⛢ au ♅",
+    chimbuko: "wa Latin kutoka Ūranus wa mungu wa giriki Οὐρανός Ouranos",
+    mgunduzi: "Mgunduzi William Herschel",
+    imageId: "Li41RApUAQA",
+  },
+  {
+    id: 4,
+    jina: "Mercury",
+    alama: "☿",
+    chimbuko: "",
+    mgunduzi: "hakuna taarifa",
+    imageId: "71W3CWeZF7A",
+  },
+];
