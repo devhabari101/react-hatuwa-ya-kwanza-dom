@@ -1,25 +1,35 @@
+import { useState } from "react";
 import { planets } from "./data.js";
-import { getImageUrl } from "./utils.js";
 
 export default function List() {
-  const orodhaVitu = planets.map((sayari) => (
-    <li key={sayari.id}>
-      <img src={getImageUrl(sayari)} alt={sayari.jina} />
+  const [index, setIndex] = useState(0);
+  const [onyeshaZaidi, setOnyeshaZaidi] = useState(false);
 
-      <p>
-        Jina la sayari <b>{"" + sayari.jina}</b>
-      </p>
-      <p>alama {" " + sayari.alama + " "}</p>
-      <p>
-        imeitwa jina la <b>{sayari.chimbuko}</b>
-      </p>
-      <p>{sayari.mgunduzi}</p>
-    </li>
-  ));
+  function handleClick() {
+    setIndex(index + 1);
+  }
+
+  function handleMoreClick() {
+    setOnyeshaZaidi(!onyeshaZaidi);
+  }
+
+  let sayari = planets[index];
   return (
-    <article>
+    <>
       <h1>Elimu ya Sayari na Sayansi ya Vimondo</h1>
-      <ul>{orodhaVitu}</ul>
-    </article>
+      <button onClick={handleClick}>Nyingine</button>
+      <h2>
+        <i>{sayari.jina} </i>
+        alama {sayari.alama}
+      </h2>
+      <h3>
+        ({index + 1} of {planets.length})
+      </h3>
+      <button onClick={handleMoreClick}>
+        {onyeshaZaidi ? "Ficha" : "Onyesha"} zaidi
+      </button>
+      <img src={sayari.url} alt={sayari.alt} />
+      {onyeshaZaidi && <p>{sayari.maelezo}</p>}
+    </>
   );
 }
